@@ -40,7 +40,7 @@ Table 2.2&nbsp;&nbsp;**setComputeUnit** function
     QError QParserProgram::setComputeUnit(int iComputeUnit);
 
 
-- **run** 函数
+- **run** function
 
 &nbsp;&nbsp;&nbsp;&nbsp; The role of the **run** function is to run a parsed quantum program. In Origin Q, a quantum program has two classifications based on their measurement modes: Measure and PMeasure modes. Here, the Measure mode is Monte Carlo model, and this mode needs to be run multiple times to get the probability distribution of various state collapses since the target qubit is indeterminate before the measurement.
 The PMeasure mode is a probabilistic model, which can count the results of the possible collapse of the target quantum state and print its probability distribution. The difference between Measure and PMeasure mode is that the program runs only once in this case. During program execution, if the run was unsuccessful then returns *runProgramError*, otherwise returns *qErrorNone*. In **run** function, the input parameter of the function is the number of times that the measurement needs to run repeatedly.
@@ -185,7 +185,7 @@ Table 4.1&nbsp;&nbsp; Examples
 ---
     load [path]
 
-- run : running a quantum program that has been loaded.
+- **run** : running a quantum program that has been loaded.
 
 ---
     run -n [repeat] -gpu -f -o -b
@@ -194,12 +194,12 @@ Table 4.1&nbsp;&nbsp; Examples
     -f    Save the quantum state
     -o    Save the run results
     -b    Save the quantum state in binary(0 or 1).
-    
+
 
  ### The cloud simulation model
 
  &nbsp;&nbsp;&nbsp;&nbsp;The cloud simulation mode run commamd are shonw below：
- 
+
  - submit :Submit local quantum program file.
 
 ---
@@ -221,20 +221,3 @@ Table 4.1&nbsp;&nbsp; Examples
 - Execute the **make -f Makefile.QPandaAPI-swig** commamd to generate **_QPandaAPI.so** library under the QPandaAPI folder.
 
 - Copy *QPandaAPI.py* to *linuxlib* folder.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
