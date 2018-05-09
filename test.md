@@ -3,7 +3,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;Q-Panda SDK is an open source Quantum Software Development Kit based on Quantum Cloud Service launched by the Origin Quantum Computing Company. The user can develop a quantum program executed in the cloud based on this development kit. Q-Panda use the C++ language as the classical host language and supports the quantum language written in QRunes.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Q-Panda SDK is an open source Quantum Software Development Kit based on Quantum Cloud Service launched by the Origin Quantum Computing Company. The user can develop a quantum program executed in the cloud based on this development kit. Q-Panda use the C++ language as the classical host language and supports the quantum language written in QRunes.
+&nbsp;&nbsp;&nbsp;&nbsp; Currently, Q-Panda supports up to 32-qubits simulations. It supports two modes of operation: local simulation and cloud simulation. Q-Panda provides an executable command-line program that controls the loading, running and readout of the quantum program. Additionally, Q-panda SDK provides a set of APIs for users to customize the required function.
 
 ## 2. QPandaSDK Interface Introduction
 
