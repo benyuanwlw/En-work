@@ -92,11 +92,11 @@ Table 2.5&nbsp;&nbsp;getQuantumState function
     QError QParserProgram::getQState(STRING & sState);
 
 
-## 3. QPandaSDK Compilation introduction
+## 3. QPandaSDK Compilation Introduction
 
 &nbsp;&nbsp;&nbsp;&nbsp; QPandaSDK has two parts: QpandaAPI, and a quantum program execution system based on QPandaAPI.
 
-### QPandaAPI compilation
+### QPandaAPI Compilation
 
 &nbsp;&nbsp;&nbsp;&nbsp; QPandaAPI can be compiled using Makefile or Visual Studio compiler.
 
@@ -116,7 +116,7 @@ Table 2.5&nbsp;&nbsp;getQuantumState function
 
 
 
-### The execution compilation of quantum program
+### The Execution Compilation of Quantum Program
 
 &nbsp;&nbsp;&nbsp;&nbsp; Our system only supports Visual Studio 64-bit compilation since we use some public libraries. Before compiling the quantum program, users need to prepare the following environment:
 
@@ -130,7 +130,7 @@ Table 2.5&nbsp;&nbsp;getQuantumState function
 
 - Compile *QuantumInstructionHandle*、*GPUEmulator*、*QRunesParser*、*QPandaAPI*、*QuantumCloudHTTP* and *QuantumCommandControl* libraries sequentially, and the application *ConsoleApplication* .
 
-## 4. QPandaAPI usage example.
+## 4. QPandaAPI Usage Example.
 
 Table 4.1&nbsp;&nbsp; Examples
 ---
@@ -157,7 +157,7 @@ Table 4.1&nbsp;&nbsp; Examples
   }
 ```
 
-## 5. Examples of quantum program execution.
+## 5. Examples of Quantum Program Execution.
 
 &nbsp;&nbsp;&nbsp;&nbsp; Before using the quantum program execution system, the following steps need to be performed:
 
@@ -177,7 +177,7 @@ Table 4.1&nbsp;&nbsp; Examples
 - mode 1 represent the Local Simulation Mode；
 - mode 2 represent the Cloud Simulation Mode
 
-### Local simulation mode run command
+### Local Simulation Mode Run Command
 
 &nbsp;&nbsp;&nbsp;&nbsp;The local simulation run mode command is as follow:
 - **load** : Loading local quantum program file.
