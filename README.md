@@ -31,4 +31,4 @@ See details in [QRunes Generator Introduction](/QRunesGenerator/README.md)
 
 - **loadFile** function
 
-&nbsp;&nbsp;&nbsp;&nbsp;The role of the **loadFile** function is to load and analyze the quantum program written by the user. *loadProgramError* is returned if there is a syntax error during program execution. Otherwise, returns 'ErrorNone'
+&nbsp;&nbsp;&nbsp;&nbsp;The role of the **loadFile** function is to load and analyze the quantum program written by the user. *loadProgramError* is returned if there is a syntax error during program execution. Otherwise, returns ''ErrorNone''
