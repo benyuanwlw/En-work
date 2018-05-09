@@ -25,3 +25,10 @@ See details in [QRunes Generator Introduction](/QRunesGenerator/README.md)
 ## License
 
 [Apache License 2.0](LICENSE)
+
+
+## 2. QPandaSDK Interface Introduction
+
+- **loadFile** function
+
+&nbsp;&nbsp;&nbsp;&nbsp;The role of the **loadFile** function is to load and analyze the quantum program written by the user. *loadProgramError* is returned if there is a syntax error during program execution. Otherwise, returns *qErrorNone*.
