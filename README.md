@@ -1,5 +1,5 @@
 # Q-Panda
-> Revised versions 1.0 by Wang（Try to trasnlate the origin text of QPandaSdk in English）.
+> Revised versions 1.0 by WLW（Try to trasnlate the origin text of QPandaSDK in English）.
 
 ![Q-Panda Logo](/img/Q_Panda_logo.png)
 
