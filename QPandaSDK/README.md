@@ -217,6 +217,7 @@ Table 4.1&nbsp;&nbsp; Examples
 
 - 安装DepInstalPackage中python 2.7.14。
 
+---
 
 - Register and get the APIkey from http://www.qubitonline.cn/.
 
@@ -280,6 +281,13 @@ Table 4.1&nbsp;&nbsp; Examples
 
 - 复制QPandaAPI.py到linuxlib文件夹下。 
 
+
+
+
+
+
+
+---
 
 - Execute the **make** commamd to generate *libQRunesParser.so* and *libQuantumInstructionHandle.so* dynamic libraries under the QPandaSDK folder.
 
