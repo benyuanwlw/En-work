@@ -1,6 +1,11 @@
 # QPandaSDK
 ## 1.QPandaSDK Introduction
 
+
+Q-Panda SDK是由本源量子推出的，基于量子云服务的，开源的量子软件开发包。用户可基于此开发包开发在云端执行的量子程序。Q-Panda使用C++语言作为经典宿主语言，支持以QRunes书写的量子语言。
+
+目前，Q-Panda支持本地仿真运行模式和云仿真运行模式，最高可支持到32位。Q-Panda提供了一个可执行的命令行程序，通过指令控制量子程序的加载、运行和读出。另外，Q-Panda提供了一组API，可供用户自行定制功能。
+
 &nbsp;&nbsp;&nbsp;&nbsp;Q-Panda SDK is an open source Quantum Software Development Kit based on Quantum Cloud Service launched by the Origin Quantum Computing Company. The user can develop a quantum program executed in the cloud based on this development kit. Q-Panda use the C++ language as the classical host language and supports the quantum language written in QRunes.
 
 &nbsp;&nbsp;&nbsp;&nbsp; Currently, Q-Panda supports up to 32-qubits simulations. It supports two modes of operation: local simulation and cloud simulation. Q-Panda provides an executable command-line program that controls the loading, running and readout of the quantum program. Additionally, Q-panda SDK provides a set of APIs for users to customize the required function.
@@ -24,6 +29,8 @@ Table 2.1 &nbsp;&nbsp; **loadFile** function
 
 -  **setComputeUnit** function
 
+loadFile函数的作用是加载并解析用户编写的量子程序，如果程序有语法错误则返回loadProgramError，否则返回qErrorNone。其输入参数为需要解析的量子程序的路径。输出参数为解析的量子程序需要解析的量子bit数。
+
 &nbsp;&nbsp;&nbsp;&nbsp;The role of the **setComputeUnit** function is to set the way to simulate quantum computing. There are two choices for user: CPU mode or GPU mode. If user settings fail then returns *setComputeError*, otherwise returns *qErrorNone*, and the input parameter of the function is the type of the calculation unit.
 
 
@@ -42,6 +49,8 @@ Table 2.2&nbsp;&nbsp;**setComputeUnit** function
 
 - **run** function
 
+&nbsp;&nbsp;&nbsp;&nbsp; run函数的作用是运行解析的量子程序。量子程序根据其测量模式分类两种：Measure和PMeasure模式。Measure模式即为蒙特卡洛模式，由于目标量子在测量前，其状态是不确定的，所以该模式需要运行多次才能得到各种情况的概率。PMeasure模式即为概率模式，该模式会统计出每个目标量子各种可能的状态并统计其概率，PMeasure模式的程序只会运行一次。如果运行不成功则返回runProgramError，否则返回qErrorNone。函数的输入参数为需要重复运行的次数。
+
 &nbsp;&nbsp;&nbsp;&nbsp; The role of the **run** function is to run a parsed quantum program. In Origin Q, a quantum program has two classifications based on their measurement modes: Measure and PMeasure modes. Here, the Measure mode is Monte Carlo model, and this mode needs to be run multiple times to get the probability distribution of various state collapses since the target qubit is indeterminate before the measurement.
 The PMeasure mode is a probabilistic model, which can count the results of the possible collapse of the target quantum state and print its probability distribution. The difference between Measure and PMeasure mode is that the program runs only once in this case. During program execution, if the run was unsuccessful then returns *runProgramError*, otherwise returns *qErrorNone*. In **run** function, the input parameter of the function is the number of times that the measurement needs to run repeatedly.
 
@@ -59,6 +68,8 @@ Table 2.3 &nbsp;&nbsp;**run** function
 
 - **getResult** function
 
+ getResult函数的作用是获取量子程序的运行结果。如果获取不成功则返回getResultError，否则返回qErrorNone。函数的输入参数为运行后的结果。
+
 &nbsp;&nbsp;&nbsp;&nbsp;The role of the getResult function gets the running results of a quantum program. If the retrieval was unsuccessful then returns *getResult*, or *qErrprNone* otherwise. Moreover, the input parameter of this function is the result of the running.
 
 
@@ -74,6 +85,8 @@ Table 2.4&nbsp;&nbsp;**getResult** function
     QError getResult(STRING & sResult);
 
 - getQuantumState function
+
+    getQuantumState函数的作用是获取量子程序运行后的整个量子体系所有分量的复振幅。如果获取不成功返回getQStateError，否则返回qErrorNone。函数的输入参数为string类型的所有分量的复振幅。
 
 &nbsp;&nbsp;&nbsp;&nbsp;The role of the getQuantumState function is to obtain the complex amplitude of all components of the entire quantum system after the given quantum program runs. *getQStateError* if unsuccessful, or *qErrprNone* otherwise. The input parameter of the function is the complex amplitude of all components (parameter type is string).
 
