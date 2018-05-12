@@ -127,6 +127,16 @@ QPandaAPI可使用makefile编译和Visual Studio编译。
 
 - Visual Studio Compilation
 
+
+&nbsp;&nbsp;&nbsp;&nbsp;使用Visual Studio编译主要分为以下几步：
+
+- 创建解决方案；
+
+- 加载QPandaAPI、QRunesParser、QuantumInstructionHandle、GPUEmulator子项目；
+
+- 分别编译QuantumInstructionHandle、GPUEmulator、QRunesParser、QPandaAPI，顺序从前向后。
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;There are several steps to using the Visual Studio compiler:
 
 - Create.
