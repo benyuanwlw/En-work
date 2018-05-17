@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 
 # Q-Panda
 > Revised versions 1.0 by WLW（Try to trasnlate the origin text of QPandaSDK in English）.
@@ -30,10 +30,4 @@ See details in [QRunes Generator Introduction](/QRunesGenerator/README.md)
 
 
 
-居中格式: $$xxx$$
-$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-靠左格式: \\(xxx\\)
-\\(x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\)
-测试
-$$\frac{7x+5}{1+y^2}$$
-\\(l(x_i) = - \log_2 P(x_i)\\)
+
